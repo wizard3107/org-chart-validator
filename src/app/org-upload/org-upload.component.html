@@ -1,0 +1,14 @@
+<div class="upload-container"  *ngIf="!showErrorTable">
+  <h2>Upload Organization Chart</h2>
+  <div class="file-container">
+    <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls, .csv" />
+    <button (click)="validateFile()" [disabled]="!dataLoaded">Validate</button>
+  </div>
+</div>
+
+<!-- Displaying validation errors in a simple table -->
+<app-error-table
+  *ngIf="showErrorTable"
+  [errors]="errors"
+  (goBack)="goBack()"
+></app-error-table>

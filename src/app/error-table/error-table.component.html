@@ -1,0 +1,26 @@
+<div *ngIf="errors.length > 0" class="table-container">
+  <h3>Validation Errors:</h3>
+  
+  <table class="error-table">
+    <thead>
+      <tr>
+        <th>Error Category</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let error of errors">
+        <td>{{ error.category }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let detail of error.errors" class="error-text" [innerHTML]="detail"></li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="actions">
+    <button (click)="exportToExcel()">Export to Excel</button>
+    <button (click)="onBack()">Back</button>
+  </div>
+</div>

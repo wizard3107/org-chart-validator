@@ -1,0 +1,48 @@
+/* Dark Theme Styling */
+
+.upload-container {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 4px 4px 4px 4px rgba(16, 24, 40, 0.1);
+  border-radius: 4px;
+  background-color: #2e2e2e;
+  color: #ffffff;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #f1f1f1;
+  }
+  .file-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    input[type="file"] {
+      cursor: pointer;
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #777;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #51a854;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+  
+    button:disabled {
+      background-color: #555;
+      cursor: not-allowed;
+    }
+  }
+
+}
