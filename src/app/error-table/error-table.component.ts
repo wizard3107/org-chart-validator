@@ -6,7 +6,7 @@ import * as XLSX from 'xlsx';
   selector: 'app-error-table',
   imports: [CommonModule],
   templateUrl: './error-table.component.html',
-  styleUrl: './error-table.component.scss'
+  styleUrl: './error-table.component.scss',
 })
 export class ErrorTableComponent {
   @Input() errors: { category: string; errors: string[] }[] = [];

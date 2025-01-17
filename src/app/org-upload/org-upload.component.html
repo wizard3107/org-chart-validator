@@ -1,4 +1,4 @@
-<div class="upload-container"  *ngIf="!showErrorTable">
+<div class="upload-container" *ngIf="!showErrorTable">
   <h2>Upload Organization Chart</h2>
   <div class="file-container">
     <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls, .csv" />
@@ -8,7 +8,8 @@
     The uploaded file is empty. Please upload a file with valid data.
   </div>
   <div *ngIf="invalidData" class="error-message">
-    The uploaded file does not contain the required columns (email, fullname, role, reportsTo). Please check the file and try again.
+    The uploaded file does not contain the required columns (email, fullname, role, reportsTo). Please check the file
+    and try again.
   </div>
   <div *ngIf="invalidFile" class="error-message">
     The uploaded file format is invalid or the file is corrupt. Please upload a valid file.
@@ -16,8 +17,4 @@
 </div>
 
 <!-- Displaying validation errors in a simple table -->
-<app-error-table
-  *ngIf="showErrorTable"
-  [errors]="errors"
-  (goBack)="goBack()"
-></app-error-table>
+<app-error-table *ngIf="showErrorTable" [errors]="errors" (goBack)="goBack()"></app-error-table>
