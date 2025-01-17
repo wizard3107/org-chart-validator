@@ -4,6 +4,15 @@
     <input type="file" (change)="onFileChange($event)" accept=".xlsx, .xls, .csv" />
     <button (click)="validateFile()" [disabled]="!dataLoaded">Validate</button>
   </div>
+  <div *ngIf="emptyFile" class="error-message">
+    The uploaded file is empty. Please upload a file with valid data.
+  </div>
+  <div *ngIf="invalidData" class="error-message">
+    The uploaded file does not contain the required columns (email, fullname, role, reportsTo). Please check the file and try again.
+  </div>
+  <div *ngIf="invalidFile" class="error-message">
+    The uploaded file format is invalid or the file is corrupt. Please upload a valid file.
+  </div>
 </div>
 
 <!-- Displaying validation errors in a simple table -->
